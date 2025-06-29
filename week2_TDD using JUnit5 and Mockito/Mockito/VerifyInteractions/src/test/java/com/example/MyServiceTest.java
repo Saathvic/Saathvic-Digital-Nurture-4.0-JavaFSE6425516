@@ -1,14 +1,13 @@
 package com.example;
-import static org.mockito.Mockito.*;
-
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import static org.mockito.Mockito.verify;
 public class MyServiceTest {
 	 @Test
 	    public void testVerifyInteraction() {
-	        ExternalApi mockApi = Mockito.mock(ExternalApi.class);
-	        MyService service = new MyService(mockApi);
-	        service.fetchData();
-	        verify(mockApi).getData(); // Verifies method was called
+	        ExternalApi m = Mockito.mock(ExternalApi.class);
+	        MyService s = new MyService(m);
+	        s.fetchData();
+	        verify(m).getData(); // Verifies method was called
 	    }
 }

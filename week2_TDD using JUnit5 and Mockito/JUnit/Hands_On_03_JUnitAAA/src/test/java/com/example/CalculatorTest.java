@@ -1,21 +1,21 @@
 package com.example;
-import org.junit.Before;
 import org.junit.After;
+import static org.junit.Assert.assertEquals;
+import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 public class CalculatorTest {
-	private Calculator calculator;
+	private Calculator c;
 
     @Before
     public void setUp() {
         System.out.println("Setting up calculator...");
-        calculator = new Calculator();
+        c = new Calculator();
     }
 
     @After
     public void tearDown() {
         System.out.println("Cleaning up calculator...");
-        calculator = null;
+        c = null;
     }
 
     @Test
@@ -25,10 +25,10 @@ public class CalculatorTest {
         int b = 5;
 
         // Act
-        int result = calculator.add(a, b);
+        int r = c.add(a, b);
 
         // Assert
-        assertEquals(12, result);
+        assertEquals(12, r);
     }
 
     @Test
@@ -38,9 +38,9 @@ public class CalculatorTest {
         int b = 4;
 
         // Act
-        int result = calculator.subtract(a, b);
+        int r = c.subtract(a, b);
 
         // Assert
-        assertEquals(6, result);
+        assertEquals(6, r);
     }
 }

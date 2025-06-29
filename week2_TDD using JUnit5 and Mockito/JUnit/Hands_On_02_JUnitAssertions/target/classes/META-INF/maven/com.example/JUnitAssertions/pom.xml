@@ -10,7 +10,7 @@
   <version>1.0-SNAPSHOT</version>
 
   <dependencies>
-    <!-- ✅ JUnit 4 Dependency -->
+    <!-- ? JUnit 4 Dependency -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -18,7 +18,7 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- ✅ Hamcrest (used by JUnit 4) -->
+    <!-- ? Hamcrest (used by JUnit 4) -->
     <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest-core</artifactId>

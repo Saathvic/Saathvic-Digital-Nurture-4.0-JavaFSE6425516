@@ -14,6 +14,6 @@ public class FinancialForecast {
         int targetYear = 5;           // predict value after 5 years
 
         double futureValue = forecast(targetYear, currentValue, growthRate);
-        System.out.printf("Predicted value after %d years: ₹%.2f\n", targetYear, futureValue);
+        System.out.printf("Predicted value after %d years: ?%.2f\n", targetYear, futureValue);
     }
 }

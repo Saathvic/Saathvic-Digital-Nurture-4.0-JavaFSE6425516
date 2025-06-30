@@ -9,12 +9,12 @@ public class MyServiceTest {
 
     @Test
     public void testExternalApi() {
-        ExternalAPI m = Mockito.mock(ExternalAPI.class);
-        when(m.getData()).thenReturn("Mock Data");
+        ExternalAPI mockApi = Mockito.mock(ExternalAPI.class);
+        when(mockApi.getData()).thenReturn("Mock Data");
 
-        MyService s = new MyService(m);
-        String r = s.fetchData();
+        MyService service = new MyService(mockApi);
+        String result = service.fetchData();
 
-        assertEquals("Mock Data", r);
+        assertEquals("Mock Data", result);
     }
 }

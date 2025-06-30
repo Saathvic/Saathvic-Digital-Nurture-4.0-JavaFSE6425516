@@ -1,13 +1,13 @@
 package com.example;
 
 public class MyService {
-	private final ExternalAPI a;
+	private ExternalAPI externalApi;
 
-    public MyService(ExternalAPI a) {
-        this.a = a;
+    public MyService(ExternalAPI externalApi) {
+        this.externalApi = externalApi;
     }
 
     public String fetchData() {
-        return a.getData();
+        return externalApi.getData();
     }
 }

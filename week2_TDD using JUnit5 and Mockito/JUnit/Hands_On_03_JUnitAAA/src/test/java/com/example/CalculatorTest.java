@@ -4,43 +4,37 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 public class CalculatorTest {
-	private Calculator c;
+	private Calculator calculator;
 
     @Before
     public void setUp() {
         System.out.println("Setting up calculator...");
-        c = new Calculator();
+        calculator = new Calculator();
     }
 
     @After
     public void tearDown() {
         System.out.println("Cleaning up calculator...");
-        c = null;
+        calculator = null;
     }
 
     @Test
     public void testAddition() {
-        // Arrange
-        int a = 7;
-        int b = 5;
+        int x = 7;
+        int y = 5;
 
-        // Act
-        int r = c.add(a, b);
+        int result = calculator.add(x, y);
 
-        // Assert
-        assertEquals(12, r);
+        assertEquals(12, result);
     }
 
     @Test
     public void testSubtraction() {
-        // Arrange
-        int a = 10;
-        int b = 4;
+        int x = 10;
+        int y = 4;
 
-        // Act
-        int r = c.subtract(a, b);
+        int result = calculator.subtract(x, y);
 
-        // Assert
-        assertEquals(6, r);
+        assertEquals(6, result);
     }
 }

@@ -1,6 +1,6 @@
 public class FinancialForecast {
 
-    // Recursive method to calculate future value
+   
     public static double forecast(int year, double currentValue, double growthRate) {
         if (year == 0) {
             return currentValue;
@@ -9,9 +9,9 @@ public class FinancialForecast {
     }
 
     public static void main(String[] args) {
-        double currentValue = 1000.0; // initial value
-        double growthRate = 0.1;      // 10% annual growth
-        int targetYear = 5;           // predict value after 5 years
+        double currentValue = 1000.0; 
+        double growthRate = 0.1;     
+        int targetYear = 5;         
 
         double futureValue = forecast(targetYear, currentValue, growthRate);
         System.out.printf("Predicted value after %d years: ?%.2f\n", targetYear, futureValue);
